@@ -1,0 +1,724 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+:root{
+    --main-color: rgb(255, 48, 91);
+
+}
+body ul{
+    list-style: none;
+
+}
+.container{
+    margin: 0 200px 0 200px;
+}
+/*smale screen*/
+@media (min-width:768px){
+    .container{
+        width: 100%;
+    }
+}
+/*mediam screen*/
+@media (min-width:992px){
+    .container{
+        width: 900px;
+    }
+}
+/*large screen*/
+@media (min-width:1286px){
+    .container{
+        width: 1170px;
+    }
+}
+
+
+
+header{
+    background-image: url(../img/slider-02.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+header .overland{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+nav{
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    font-family: "Roboto", sans-serif;
+
+}
+nav h1{
+    color: var(--main-color);
+    font-size: 24px;
+}
+nav ul{
+    display: flex;
+    position: absolute;
+    right: 0;
+    list-style: none;
+    top: 0;
+    color: white
+
+}
+@media (max-width:768px){
+    nav ul{
+        display: none;
+    }
+    .container{
+        margin-left: 30px;
+    }
+}
+nav li{
+    margin: 20px 13px 20px 13px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+nav li:hover{
+    color: var(--main-color);
+}
+nav .active{
+    color: var(--main-color);
+}
+header .web-intro{
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translatex(-50%);
+}
+header .web-intro h3{
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+}
+header .web-intro h1{
+    color: var(--main-color);
+    font-size: 70px;
+    font-family: "Source Code Pro", sans-serif;
+    text-transform: uppercase;
+    margin: 10px 0 10px;
+    
+}
+
+header .web-intro h4{
+    font-family: "Source Code Pro", sans-serif;
+    font-size: 26px;
+    font-weight: normal;
+    width: 500px;
+    height: 40px;
+}
+
+
+
+.about{
+    height: 100vh;
+    position: relative;
+}
+.about .img-box{
+    display: inline-block;
+    position: relative;
+    border: 8px solid rgb(85, 85, 85);
+    width: fit-content;
+    border-radius: 5px;
+    height: 450px;
+    top: 100px;
+    left: 70px;
+    
+}
+.about img{
+    border-radius: 5px;
+    
+
+}
+.about .img-box .fixed{
+    position: relative;
+    top: 20px;
+    left: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.about .img-box .img-layer{
+    width: 100%;
+    height: 440px;
+    background-color: rgba(0, 0, 0, 0.58);
+    position: absolute;
+    border-radius: 5px;
+    top: 100%;
+    transition: top 1s;
+}
+.about .img-box:hover .img-layer{
+    top: 0;
+}
+.about .img-box .img-layer .social-icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.about .img-box .img-layer .social-icon ul{
+    list-style: none;
+    display: flex;
+}
+.about .img-box .img-layer .social-icon li a{
+    color: white;
+    margin: 12px;
+}
+.about .content{
+     width: 500px;
+     margin-top: 70px;
+     float: right;
+     margin-right: 140px;
+
+}
+.about .content .first-con h1{
+    color: rgb(59, 58, 58);
+    text-transform: uppercase;
+    font-family: "Source Sans Pro", sans-serif;
+    position: relative;
+
+}
+.about .content .first-con h1::before{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 23px;
+    background-color: var(--main-color);
+    left: -15px;
+    bottom: 7.5px;
+
+}
+.about .content .first-con p{
+    color: rgb(59, 58, 58);
+    font-size: 17px;
+    line-height: 1.5;
+    width: 580px;
+    margin-bottom: 20px;
+    position: relative;
+    font-family: "Source Sans Pro", sans-serif;
+
+
+}
+.dashin-line{
+    border: none;
+    border-top: 1px dashed rgb(59, 58, 58);
+    width: 100%;
+    margin-bottom: 20px;
+}
+.about .content .second-con ul{
+    list-style: none;
+    font-family: "Source Sans Pro", sans-serif;
+}
+.about .content .second-con .se-lef{
+    display: inline-block;
+
+}
+.about .content .second-con .se-rig{
+    float: right;
+    
+}
+.about .content .second-con ul li{
+    margin-bottom: 20px;
+    color: rgb(59, 58, 58);
+
+}
+.about .content .second-con button{
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 5px;
+    height: 50px;
+    border: none;
+    margin-right: 20px;
+    
+}
+.about .content .second-con button a{
+    text-decoration: none;
+    color: white;
+    padding: 20px ;
+    text-transform: capitalize;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: normal;
+}
+.about .content .second-con button:hover{
+    background-color: red;
+}
+
+
+
+
+.services{
+    height: 70vh;
+    text-align: center;
+    background-color:rgb(241, 241, 241) ;
+}
+.mainheader{
+    padding-top: 50px;
+    text-align: center;
+    
+}
+.mainheader h1{
+    font-size: 40px;
+    font-family: "Source Sans Pro", sans-serif;
+    text-transform: capitalize;
+    color: rgb(59, 58, 58);
+    position: relative;
+    margin-bottom: 0;
+}
+.lines{
+    width: 200px;
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 10px;
+    text-align: center;
+}
+.lines .short1{
+    display: flex;
+    width: 50%;
+    height: 1px;
+    background-color: var(--main-color);
+    margin-bottom: 9px;
+    margin-top: 5px;
+    margin-left:50px ;
+
+}
+.lines .short2{
+    display: flex;
+    width: 50%;
+    height: 1px;
+    background-color: var(--main-color);
+    margin-bottom: 5px;
+    margin-top: 8px;
+    margin-left:50px ;
+
+}
+.lines .long{
+    display: flex;
+    width: 100%;
+    height: 1px;
+    background-color: var(--main-color);
+}
+.services .section{
+    margin: 100px 150px 0 150px;
+    display: flex;
+    
+}
+.services .section .box{
+    transition: .5s;
+    height: 250px;
+    width: 300px;
+
+}
+.services .section .box:hover{
+    border: 1px solid black;
+    background-color: white;
+    border: none;
+    box-shadow: 0px 15px 20px 2px rgb(200, 193, 193);
+}
+.services .section .box i{
+    color: var(--main-color);
+    font-size: 30px;
+    margin-bottom: 15px;
+    margin-top: 40px;
+}
+.services .section .box h3{
+    text-transform: uppercase;
+    font-family: "Source Sans Pro", sans-serif;
+    color: rgb(59, 58, 58);
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.services .section .box p{
+    font-family: "Source Sans Pro", sans-serif;
+    color: rgb(59, 58, 58);
+    width: 95%;
+    line-height: 1.5;
+    margin-left: 10px;
+}
+
+
+
+
+.portfolio{
+    height: 130vh;
+    text-align: center;
+}
+.portfolio .part{
+    margin-top: 90px;
+    position: relative;
+}
+.portfolio .part ul{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+
+}
+.portfolio .part ul li{
+    margin-right: 22px;
+    list-style: none;
+    font-size: 16px;
+    font-family: "Source Sans Pro", sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: rgb(59, 58, 58);
+    transition: 0.3s;
+}
+.portfolio .part ul li:hover{
+    color: var(--main-color);
+    font-size:20px ;
+}
+.portfolio .images{
+    margin-top: 160px;
+    position: relative;
+}
+
+.portfolio .images img{
+    width: 370px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+.portfolio .images .img1{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+.portfolio .images .img2{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 310px;
+    transform: translate(-50%);
+}
+
+.portfolio .images .box .ex-layer{
+    position: absolute;
+    width: 370px;
+    height: 280px;
+    background-color: rgba(0, 0, 0, 0.58);
+    transition: 2s;
+}
+.portfolio .images .box{
+    position: relative;
+    overflow: hidden;
+
+}
+.portfolio .images .box:hover .ex-layer{
+    position: absolute;
+    top: 0;
+}
+.portfolio .images .box .ex-layer i{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    color: var(--main-color);
+}
+
+
+
+
+.analayis{
+    background-color:rgb(241, 241, 241) ;
+    height: 40vh;
+    position: relative;
+}
+.analayis .content{
+    display: flex;
+    position: absolute;
+    left: 200px;
+    top: 60px;
+}
+.analayis .content .datacontent{
+    margin-right: 100px;
+    text-align: center;
+    padding: 50px 50px 50px 50px;
+    width: 220px;
+}
+.analayis .content .datacontent i{
+    color: var(--main-color);
+    font-size: 30px;
+    margin-bottom: 20px;
+
+}
+.analayis .content .datacontent h3{
+    font-size: 25px;
+    font-family: "Source Sans Pro", sans-serif;
+    margin-bottom: 5px;
+}
+.analayis .content .datacontent h4{
+    font-family: "Source Sans Pro", sans-serif;
+    text-transform: capitalize;
+    color: rgb(59, 58, 58);
+
+
+}
+
+
+
+
+.client{
+    height: 80vh;
+    position: relative;
+}
+.client .card{
+    position: relative;
+    display: flex;
+    width: 50%;
+    height: 280px;
+    border: 1px solid black;
+    margin-top: 90px;
+    margin-left: 400px;
+    background-color:rgb(241, 241, 241) ;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.client .card img{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    top: 50px;
+    left: 30px;
+}
+.client .card .content{
+    position: absolute;
+    width: 80%;
+    left: 160px;
+    top: 50px;
+    font-family: "Source Sans Pro", sans-serif;
+    color: rgb(59, 58, 58);
+}
+.client .card::before{
+    content: "";
+    position: absolute;
+    border: 120px solid ;
+    border-color: transparent transparent var(--main-color) transparent;
+    left: -120px;
+    top: -120px;
+    transform: rotate(-45deg);
+}
+.client .card .content h2{
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+.client .card .content .logo{
+    color: rgb(139, 138, 138);
+    font-size: 15px;
+
+}
+.client .card .content .logo i{
+    margin-right: 3px;
+}
+.client .card .content p{
+    color:rgb(59, 58, 58) ;
+    margin-top: 15px;
+    margin-bottom:15px ;
+    line-height: 1.5;
+}
+.client .card .stars i{
+    color: rgb(241, 195, 13);
+}
+.client .bullets{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+.client .bullets ul{
+    list-style: none;
+    display: flex;
+}
+.client .bullets li{
+    width:10px;
+    height: 10px;
+    border: 1px solid var(--main-color) ;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+.client .bullets .circle{
+    background-color: var(--main-color);
+    width: 20px;
+    border-radius: 10px;
+}
+
+
+
+
+.blog{
+    background-color:rgb(241, 241, 241) ;
+    height: 110vh;
+}
+.blog .b-block {
+    width: 60%;
+    display: flex;
+    margin: 100px 100px 0 130px;
+}
+.blog .b-block .block-box{
+    width: 400px;
+    height: 500px;
+    margin-right: 30px;
+    background-color: white;
+}
+.blog .b-block .block-box img{
+    width: 400px;
+}
+.block-box .content{
+    padding: 20px ;
+
+}
+.block-box .content .date{
+    font-family: "Source Sans Pro", sans-serif;
+    color: rgb(59, 58, 58);
+}
+.block-box .content h2{
+    font-family: "Source Sans Pro", sans-serif;
+    color: rgb(59, 58, 58);
+    margin: 10px 0 15px 0 ;
+}
+.block-box .content p{
+    font-family: "Source Sans Pro", sans-serif;
+    color: rgb(59, 58, 58);
+    line-height: 1.6;
+}
+.block-box .content a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Source Sans Pro", sans-serif;
+    color: rgb(59, 58, 58);
+
+}
+.block-box .content a i{
+   
+    margin-top: 60px;
+    margin-left: 4px;
+    padding-top: 2px;
+}
+.block-box .content a:hover{
+    color: var(--main-color);
+}
+
+
+
+
+.contact{
+    height: 80vh;
+    width: 100%;
+    position: relative;
+}
+.contact .database{
+    position: absolute;
+    top: 200px;
+    left: 400px;
+    border-radius: 5px;
+   
+}
+.database .name{
+    width: 350px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid  rgb(170, 168, 168);;
+    color: rgb(99, 97, 97);
+    text-transform: capitalize;
+    padding-left: 10px;
+    margin-right: 15px;
+}
+.database .email{
+    width: 350px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid  rgb(170, 168, 168);;
+    color: rgb(99, 97, 97);
+    text-transform: capitalize;
+    padding-left: 10px;
+}
+.database .subject{
+    display: block;
+    margin-top: 25px;
+    width: 717px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid  rgb(170, 168, 168);;
+    color: rgb(99, 97, 97);
+    text-transform: capitalize;
+    padding-left: 10px;
+}
+.database .message{
+    display: block;
+    margin-top: 25px;
+    width: 717px;
+    height: 100px;
+    border-radius: 5px;
+    border: 1px solid  rgb(222, 218, 218);;
+    color: rgb(99, 97, 97);
+    text-transform: capitalize;
+    padding-left: 10px;
+    max-height: 120px;
+    max-width: 800px;
+}
+.database button{
+    margin-top: 30px;
+    margin-left: 10px;
+    background-color: var(--main-color);
+    border: none;
+    height: 40px;
+    width: 150px;
+    border-radius: 5px;
+}
+.database button a{
+    color: white;
+    text-decoration: none;
+    font-family: "Source Sans Pro", sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.database button:hover{
+    background-color: red;
+}
+
+
+
+
+.footer{
+    background-color: rgb(51, 51, 51);
+    width: 100%;
+    height: 23vh;
+}
+.footer .content{
+    text-align: center;
+    justify-content: center;
+}
+.footer .content .icons li{
+    display: inline-block;
+    margin: 60px 10px 10px;
+
+}
+.footer .content .icons li a{
+    color: white;
+    font-size: 18px;
+}
+.footer .content p{
+    color: white;
+    font-family: "Source Sans Pro", sans-serif;
+}
+.footer .content p a{
+    text-decoration: none;
+    color: var(--main-color);
+
+}
+.footer .content p a:hover{
+    text-decoration:underline;
+}
